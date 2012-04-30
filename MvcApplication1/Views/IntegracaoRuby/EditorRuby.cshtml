@@ -1,0 +1,19 @@
+﻿@model MvcApplication1.Models.Editor
+
+@{
+    ViewBag.Title = "EditorRuby";
+}
+
+<h2>EditorRuby</h2>
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Valor da classe em Ruby</legend>
+        <div class="editor-label">
+            @Html.TextAreaFor(model => model.CodigoEmRuby, new {cols = 100, rows = 10 })
+        </div>
+        <br />
+    <button name="button" value="Alterar">Alterar</button>
+    </fieldset>
+
+}

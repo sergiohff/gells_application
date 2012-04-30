@@ -1,0 +1,23 @@
+﻿@model MvcApplication1.Models.Conexao
+
+@{
+    ViewBag.Title = "GeradorUrl";
+}
+
+<h1>Gerador Url</h1>
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Integração</legend>
+        <div class="editor-label">
+            @Html.Label("Url:")
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Url)
+        </div>
+        <br />
+    <button name="button" value="Gerar_Url_Facebook">Facebook</button>
+    <button name="button" value="Gerar_Url_Twitter">Twitter</button>
+    </fieldset>
+
+}

@@ -1,0 +1,37 @@
+﻿@model MvcApplication1.Models.Integracao
+
+@{
+    ViewBag.Title = "Integração Ruby";
+}
+
+<h2>Integração MVC/Ruby</h2>
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Calculo feito em Código Ruby</legend>
+        <div class="editor-label">
+            @Html.Label("Calculo de Velocidade Média:")
+        </div>
+        <br />
+        <div class="editor-label">
+            @Html.Label("Distância Percorrida (em metros):")
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Distancia)
+        </div>
+        <div class="editor-label">
+            @Html.Label("Tempo do Percurso (em segundos):")
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Tempo)
+        </div>
+        <br />
+        <button name="button" value="Calcular"> Calcular</button>
+        <br />
+        <br />
+        <div class="editor-field">
+            @ViewBag.retorno
+        </div>
+    </fieldset>
+
+}
